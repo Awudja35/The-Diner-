@@ -7,6 +7,7 @@
     "basePrice": 18.00,
     "price": "$18.00",
     "rating": "4.8",
+    "category":"main_dishes",
     "ingredients": [
       {"name": "Long Grain Rice", "included": true, "price": 0},
       {"name": "Tomatoes", "included": true, "price": 0},
@@ -28,6 +29,7 @@
     "basePrice": 20.00,
     "price": "$20.00",
     "rating": "4.7",
+    "category":"main_dishes",
     "ingredients": [
         {"name": "Basmati Rice", "included": true, "price": 0},
         {"name": "Carrots", "included": true, "price": 0},
@@ -49,6 +51,7 @@
     "basePrice": 16.00,
     "price": "$16.00",
     "rating": "4.6",
+    "category":"main_dishes",
     "ingredients": [
         {"name": "Egg Noodles", "included": true, "price": 0},
         {"name": "Bell Peppers", "included": true, "price": 0},
@@ -72,6 +75,7 @@
     "basePrice": 20.00,
     "price": "$20.00",
     "rating": "4.8",
+    "category":"main_dishes",
     "ingredients": [
         {"name": "Rice", "included": true, "price": 0},
         {"name": "Black-Eyed Beans", "included": true, "price": 0},
@@ -94,6 +98,7 @@
     "basePrice": 22.00,
     "price": "$22.00",
     "rating": "4.9",
+    "category":"main_dishes",
     "ingredients": [
       {"name": "Fermented Corn Dough", "included": true, "price": 0},
       {"name": "Cassava Dough", "included": true, "price": 0},
@@ -113,6 +118,7 @@
     "basePrice": 19.50,
     "price": "$19.50",
     "rating": "4.6",
+    "category":"main_dishes",
     "ingredients": [
       {"name": "Cassava", "included": true, "price": 0},
       {"name": "Plantain", "included": true, "price": 0},
@@ -133,6 +139,7 @@
     "basePrice": 8.00,
     "price": "$8.00",
     "rating": "4.8",
+    "category":"breakfast",
     "ingredients": [
         {"name": "Millet Porridge (Hausa Koko)", "included": true, "price": 0},
         {"name": "Ginger", "included": true, "price": 0},
@@ -150,6 +157,7 @@
     "basePrice": 5.00,
     "price": "$5.00",
     "rating": "4.7",
+    "category":"breakfast",
     "ingredients": [
         {"name": "Milo", "included": false, "price": 3.00},
         {"name": "Lipton Tea", "included": false, "price": 2.00},
@@ -172,6 +180,7 @@
     "basePrice": 15.50,
     "price": "$15.50",
     "rating": "4.8",
+    "category":"breakfast",
     "ingredients": [
       {"name": "English Muffins", "included": true, "price": 0},
       {"name": "Poached Eggs", "included": true, "price": 0},
@@ -192,6 +201,7 @@
     "basePrice": 13.50,
     "price": "$13.50",
     "rating": "4.9",
+    "category":"breakfast",
     "ingredients": [
       {"name": "Brioche Bread", "included": true, "price": 0},
       {"name": "Vanilla-Cinnamon Custard", "included": true, "price": 0},
@@ -212,6 +222,7 @@
     "basePrice": 9.00,
     "price": "$9.00",
     "rating": "4.9",
+    "category":"dessert",
     "ingredients": [
       {"name": "Chocolate Cake", "included": true, "price": 0},
       {"name": "Chocolate Ganache", "included": true, "price": 0},
@@ -230,6 +241,7 @@
     "basePrice": 8.50,
     "price": "$8.50",
     "rating": "4.8",
+    "category":"dessert",
     "ingredients": [
       {"name": "Cream Cheese", "included": true, "price": 0},
       {"name": "Graham Cracker Crust", "included": true, "price": 0},
@@ -248,6 +260,7 @@
     "basePrice": 9.50,
     "price": "$9.50",
     "rating": "4.7",
+    "category":"dessert",
     "ingredients": [
       {"name": "Ladyfingers", "included": true, "price": 0},
       {"name": "Mascarpone Cheese", "included": true, "price": 0},
@@ -268,6 +281,7 @@
       "basePrice": 5.00,
       "price": "$5.00",
       "rating": "4.8",
+      "category":"drinks",
       "ingredients": [
         {"name": "Dried Hibiscus Flowers", "included": true, "price": 0},
         {"name": "Pineapple", "included": true, "price": 0},
@@ -287,6 +301,7 @@
       "basePrice": 4.50,
       "price": "$4.50",
       "rating": "4.7",
+      "category":"drinks",
       "ingredients": [
         {"name": "Fermented Corn", "included": true, "price": 0},
         {"name": "Milk", "included": true, "price": 0},
@@ -305,6 +320,7 @@
       "basePrice": 6.50,
       "price": "$6.50",
       "rating": "4.6",
+      "category":"drinks",
       "ingredients": [
         {"name": "Fresh Palm Sap", "included": true, "price": 0},
         {"name": "Natural Fermentation", "included": true, "price": 0},
@@ -321,6 +337,7 @@
       "basePrice": 7.50,
       "price": "$7.50",
       "rating": "4.5",
+      "category":"drinks",
       "ingredients": [
         {"name": "Don Simon Sangria", "included": true, "price": 0},
         {"name": "Ice", "included": true, "price": 0},
@@ -338,6 +355,7 @@
       "basePrice": 3.00,
       "price": "$3.00",
       "rating": "4.9",
+      "category":"drinks",
       "ingredients": [
         {"name": "Coca-Cola", "included": true, "price": 0},
         {"name": "Ice", "included": true, "price": 0},
@@ -354,6 +372,7 @@
       "basePrice": 6.00,
       "price": "$6.00",
       "rating": "4.8",
+      "category":"drinks",
       "ingredients": [
         {"name": "Fresh Mango", "included": true, "price": 0},
         {"name": "Pineapple", "included": true, "price": 0},
@@ -374,6 +393,7 @@
       "basePrice": 5.50,
       "price": "$5.50",
       "rating": "4.9",
+      "category":"drinks",
       "ingredients": [
         {"name": "Young Green Coconut", "included": true, "price": 0},
         {"name": "Natural Coconut Water", "included": true, "price": 0},
@@ -391,6 +411,7 @@
       "basePrice": 5.00,
       "price": "$5.00",
       "rating": "4.7",
+      "category":"drinks",
       "ingredients": [
         {"name": "Dried Hibiscus Flowers", "included": true, "price": 0},
         {"name": "Mint", "included": true, "price": 0},

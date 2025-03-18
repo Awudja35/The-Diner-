@@ -1,5 +1,7 @@
 import { dishes } from "./restaurant.js";
-console.log(dishes);
+
+console.log("Available dishes:", dishes);
+console.log("Categories:", Object.values(dishes).map(dish => dish.category));
 
 document.addEventListener("DOMContentLoaded", function () {
     // Add tab switching functionality
@@ -9,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
             openTab(tabId);
         });
     });
+
+    // Initial setup - open the "all" tab by default
+    openTab("all");
 
     function openTab(tabId) {
         console.log("Tab clicked:", tabId);
@@ -49,37 +54,74 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
+
+    function populateTab(tabId, category) {
+        const tabElement = document.getElementById(tabId);
+        if (!tabElement) {
+            console.error(`Tab element with ID "${tabId}" not found.`);
+            return;
+        }
     
-    // Call it initially to bind events to existing food cards
-    bindFoodCardClicks();
-
-    // Populate the "All" tab with dishes
-    const allTab = document.getElementById("all");
-
-    for (let key in dishes) {
-        if (dishes.hasOwnProperty(key)) {
-            let dish = dishes[key];
-
-            let dishCard = document.createElement("div");
-            dishCard.classList.add("food-card");
-            dishCard.setAttribute("data-id", key);
-
-            dishCard.innerHTML = `
-                <div class="favorite"><i class="fa fa-heart"></i></div>
-                <div class="food-image"><img src="${dish.image}" alt="${dish.title}"></div>
-                <div class="food-info">
-                    <h3>${dish.title}</h3>
-                    <p class="description">${dish.description}</p>
-                    <div class="food-price-rating">
-                        <span class="price">${formatPrice(dish.basePrice)}</span>
-                        <span class="rating"><i class="fa fa-star"></i> ${dish.rating}</span>
-                    </div>
-                </div>
-            `;
-
-            allTab.appendChild(dishCard);
+        tabElement.innerHTML = ""; // Clear previous content
+        
+        console.log(`Populating tab ${tabId} with category ${category}`);
+        let dishCount = 0;
+    
+        for (let key in dishes) { 
+            if (dishes.hasOwnProperty(key)) {
+                let dish = dishes[key];
+                
+                // For "all" category or if the dish category matches the requested category
+                if (category === "all" || dish.category === category) {
+                    console.log(`Adding dish ${key} to tab ${tabId}`);
+                    dishCount++;
+    
+                    let dishCard = document.createElement("div");
+                    dishCard.classList.add("food-card");
+                    dishCard.setAttribute("data-id", key);
+    
+                    dishCard.innerHTML = `
+                        <div class="favorite"><i class="fa fa-heart"></i></div>
+                        <div class="food-image"><img src="${dish.image}" alt="${dish.title}"></div>
+                        <div class="food-info">
+                            <h3>${dish.title}</h3>
+                            <p class="description">${dish.description || "No description available."}</p>
+                            <div class="food-price-rating">
+                                <span class="price">${formatPrice(dish.basePrice)}</span>
+                                <span class="rating"><i class="fa fa-star"></i> ${dish.rating || "N/A"}</span>
+                            </div>
+                        </div>
+                    `;
+    
+                    tabElement.appendChild(dishCard);
+                }
+            }
+        }
+        
+        console.log(`Added ${dishCount} dishes to tab ${tabId}`);
+        
+        if (dishCount === 0) {
+            tabElement.innerHTML = `<div class="no-dishes">No dishes found in this category.</div>`;
         }
     }
+    
+    // Populate all tabs
+    populateTab("all", "all");
+    populateTab("main_dishes", "main_dishes");
+    populateTab("drinks", "drinks");
+    populateTab("desserts", "desserts");
+    populateTab("breakfast", "breakfast");
+
+    // Toggle favorite when heart is clicked
+    document.addEventListener('click', function (e) {
+        if (e.target.closest('.favorite')) {
+            e.stopPropagation();
+            const icon = e.target.closest('.favorite').querySelector('i');
+            icon.classList.toggle('fa-regular');
+            icon.classList.toggle('fa-solid');
+            icon.style.color = icon.classList.contains('fa-solid') ? '#e63946' : '';
+        }
+    });
 
     // Cart and modal data
     let cartItems = [];
@@ -107,12 +149,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Open dish modal
     function openDishModal(dish) {
+        console.log("Opening modal for dish:", dish);
+        
         if (!dish) {
             console.error("Dish data is undefined.");
             return;
         }
 
-        currentDish = dish; // Ensure currentDish is set
+        currentDish = dish;
         selectedIngredients = [];
         currentQuantity = 1;
         quantityInput.value = 1;
@@ -141,37 +185,9 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        // Call calculateTotalPrice() only after setting currentDish
         calculateTotalPrice();
-
         modal.style.display = "block";
     }
-
-    // Handle clicking on food cards dynamically
-    document.getElementById("all").addEventListener("click", function (e) {
-        let card = e.target.closest(".food-card");
-        if (!card || e.target.closest('.favorite')) return;
-
-        const dishId = card.getAttribute("data-id");
-
-        if (!dishes[dishId]) {
-            console.error(`Dish with ID "${dishId}" not found.`);
-            return;
-        }
-
-        openDishModal(dishes[dishId]);
-    });
-
-    // Toggle favorite when heart is clicked
-    document.addEventListener('click', function (e) {
-        if (e.target.closest('.favorite')) {
-            e.stopPropagation();
-            const icon = e.target.closest('.favorite').querySelector('i');
-            icon.classList.toggle('fa-regular');
-            icon.classList.toggle('fa-solid');
-            icon.style.color = icon.classList.contains('fa-solid') ? '#e63946' : '';
-        }
-    });
 
     // Handle ingredient selection
     ingredientsList.addEventListener('change', function (e) {
@@ -227,6 +243,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         cartItems.push(cartItem);
         cartCount += currentQuantity;
+        console.log("Added to cart:", cartItem);
+        console.log("Current cart items:", cartItems);
 
         if (cartBadge) {
             cartBadge.textContent = cartCount;

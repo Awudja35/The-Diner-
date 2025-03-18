@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Document</title>
+  <title>DHL Restaurant</title>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
     <img src="./imgs/shape-5.png" width="246" height="412" loading="lazy" alt="shape"
     class="shape shape-1 move-anim">
     <div class="menu-options">
-      <button data-tab='all'>All</button>
+      <button data-tab='all' class="active">All</button>
       <button data-tab='breakfast'>Breakfast</button>
       <button data-tab='main_dishes'>Main Dishes</button>
       <button data-tab='drinks'>Drinks</button>
@@ -62,220 +62,20 @@
 
   <div class="divider"><span>Recommended Dishes</span></div>
 
- <!--All Tab-->
-  <div id="all" class="food-container active">
-   
-  </div>
+  <!--All Tab-->
+  <div id="all" class="food-container active"></div>
 
   <!-- Breakfast tab -->
-  <div id="breakfast" class="food-container">
-    <div class="food-card" data-id="hausa_koko">
-      <div class="favorite"><i class="fa fa-heart"></i></div>
-      <div class="food-image"><img src="/imgs/hausa_koko.jpeg" alt="hausa_koko"></div>
-      <div class="food-info">
-        <h3>Millet Porridge</h3>
-        <p class="description">A traditional Ghanaian spicy millet porridge served hot, paired with your choice of tea. Enjoy it with sugar, milk, or other tasty additions</p>
-        <div class="food-price-rating">
-          <span class="price">$18.00</span>
-          <span class="rating"><i class="fa fa-star"></i> 4.7</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="food-card" data-id="tea">
-      <div class="favorite"><i class="fa fa-heart"></i></div>
-      <div class="food-image"><img src="/imgs/oats.jpeg" alt="Breakfast Item"></div>
-      <div class="food-info">
-        <h3>Tea Selection</h3>
-        <p class="description">A warm and comforting cup of tea with your choice of flavors. Customize it with milk, sugar, or honey for a perfect start to your day</p>
-        <div class="food-price-rating">
-          <span class="price">$16.50</span>
-          <span class="rating"><i class="fa fa-star"></i> 4.6</span>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="food-card" data-id="tea">
-      <div class="favorite"><i class="fa fa-heart"></i></div>
-      <div class="food-image"><img src="/imgs/oats.jpeg" alt="Breakfast Item"></div>
-      <div class="food-info">
-        <h3>Tea Selection</h3>
-        <p class="description">A warm and comforting cup of tea with your choice of flavors. Customize it with milk, sugar, or honey for a perfect start to your day</p>
-        <div class="food-price-rating">
-          <span class="price">$16.50</span>
-          <span class="rating"><i class="fa fa-star"></i> 4.6</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="food-card" data-id="tea">
-      <div class="favorite"><i class="fa fa-heart"></i></div>
-      <div class="food-image"><img src="/imgs/dish1.webp" alt="Breakfast Item"></div>
-      <div class="food-info">
-        <h3>Tea Selection</h3>
-        <p class="description">A warm and comforting cup of tea with your choice of flavors. Customize it with milk, sugar, or honey for a perfect start to your day</p>
-        <div class="food-price-rating">
-          <span class="price">$16.50</span>
-          <span class="rating"><i class="fa fa-star"></i> 4.6</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="food-card" data-id="tea">
-      <div class="favorite"><i class="fa fa-heart"></i></div>
-      <div class="food-image"><img src="/imgs/dish1.webp" alt="Breakfast Item"></div>
-      <div class="food-info">
-        <h3>Tea Selection</h3>
-        <p class="description">A warm and comforting cup of tea with your choice of flavors. Customize it with milk, sugar, or honey for a perfect start to your day</p>
-        <div class="food-price-rating">
-          <span class="price">$16.50</span>
-          <span class="rating"><i class="fa fa-star"></i> 4.6</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-  
-
-<!-- Desserts tab -->
-<div id="desserts" class="food-container">
-  <div class="food-card">
-    <div class="favorite"><i class="fa fa-heart"></i></div>
-    <div class="food-image"><img src="/imgs/dish2.webp" alt="Dessert Item"></div>
-    <div class="food-info">
-      <h3>Sweet Delight</h3>
-      <p class="description">Delicious dessert option to satisfy your sweet tooth after a meal.</p>
-      <div class="food-price-rating">
-        <span class="price">$12.00</span>
-        <span class="rating"><i class="fa fa-star"></i> 4.8</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="food-card">
-    <div class="favorite"><i class="fa fa-heart"></i></div>
-    <div class="food-image"><img src="/imgs/dish2.webp" alt="Dessert Item"></div>
-    <div class="food-info">
-      <h3>Chocolate Dream</h3>
-      <p class="description">Rich chocolate dessert that melts in your mouth with every bite.</p>
-      <div class="food-price-rating">
-        <span class="price">$14.00</span>
-        <span class="rating"><i class="fa fa-star"></i> 4.9</span>
-      </div>
-    </div>
-  </div>
-</div>
-  </div>
-
-   
-
-  <!-- Drinks tab -->
-  <div id="drinks" class="food-container">
-    <div class="food-card">
-      <div class="favorite"><i class="fa fa-heart"></i></div>
-      <div class="food-image"><img src="/imgs/dish2.webp" alt="Drink Item"></div>
-      <div class="food-info">
-        <h3>Fresh Lemonade</h3>
-        <p class="description">Refreshing homemade lemonade with a hint of mint.</p>
-        <div class="food-price-rating">
-          <span class="price">$8.00</span>
-          <span class="rating"><i class="fa fa-star"></i> 4.6</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="food-card">
-      <div class="favorite"><i class="fa fa-heart"></i></div>
-      <div class="food-image"><img src="/imgs/dish2.webp" alt="Drink Item"></div>
-      <div class="food-info">
-        <h3>Berry Smoothie</h3>
-        <p class="description">A blend of fresh berries and yogurt for a healthy treat.</p>
-        <div class="food-price-rating">
-          <span class="price">$9.50</span>
-          <span class="rating"><i class="fa fa-star"></i> 4.7</span>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div id="breakfast" class="food-container"></div>
 
   <!-- Main Dishes tab -->
-  <div id="main_dishes" class="food-container">
+  <div id="main_dishes" class="food-container"></div>
 
-    
-      <div class="food-card" data-id="jollof">
-        <div class="favorite"><i class="fa fa-heart"></i></div>
-        <div class="food-image"><img src="/imgs/jollof.jpeg" alt="jollof"></div>
-        <div class="food-info">
-          <h3>Jollof Rice</h3>
-          <p class="description"> Our Jollof rice is slow-cooked with tomatoes, onions, and a blend of traditional spices. Served with your choice of grilled chicken or beef</p>
-          <div class="food-price-rating">
-            <span class="price">$24.00</span>
-            <span class="rating"><i class="fa fa-star"></i> 4.9</span>
-          </div>
-        </div>
-      </div>
-  
-      <div class="food-card" data-id="friedRice">
-        <div class="favorite"><i class="fa fa-heart"></i></div>
-        <div class="food-image"><img src="/imgs/fried_rice.jpeg" alt="friedRice"></div>
-        <div class="food-info">
-          <h3>Friedrice</h3>
-          <p class="description">A delicious and aromatic rice dish stir-fried with mixed vegetables, soy sauce, and a blend of savory spices. Served with your choice of grilled chicken or shrimp.</p>
-          <div class="food-price-rating">
-            <span class="price">$24.00</span>
-            <span class="rating"><i class="fa fa-star"></i> 4.9</span>
-          </div>
-        </div>
-      </div>
-  
-      <div class="food-card" data-id="noodles">
-        <div class="favorite"><i class="fa fa-heart"></i></div>
-        <div class="food-image"><img src="/imgs/noodles.webp" alt="noodles"></div>
-        <div class="food-info">
-          <h3>Fattoush salad</h3>
-          <p class="description">Fermented corn dough wrapped in corn husks or plantain leaves and steamed. Often served with pepper sauce and fish.</p>
-          <div class="food-price-rating">
-            <span class="price">$24.00</span>
-            <span class="rating"><i class="fa fa-star"></i> 4.9</span>
-          </div>
-        </div>
-      </div>
-  
-      <div class="food-card" data-id="waakye">
-        <div class="favorite"><i class="fa fa-heart"></i></div>
-        <div class="food-image"><img src="/imgs/waakye.jpeg" alt="waakye"></div>
-        <div class="food-info">
-          <h3>Waakye</h3>
-          <p class="description">A beloved Ghanaian dish made with rice and black-eyed beans, cooked with dried millet leaves for a rich flavor. Served with your choice of protein and accompaniments.</p>
-          <div class="food-price-rating">
-            <span class="price">$24.00</span>
-            <span class="rating"><i class="fa fa-star"></i> 4.9</span>
-          </div>
-        </div>
-      </div>  
-    </div>
+  <!-- Drinks tab -->
+  <div id="drinks" class="food-container"></div>
 
-    <div class="food-card" data-id="banku">
-      <div class="favorite"><i class="fa fa-heart"></i></div>
-      <div class="food-image"><img src="/imgs/banku-tilapia.jpeg" alt="banku"></div>
-      <div class="food-info">
-        <h3>Waakye</h3>
-        <p class="description">A beloved Ghanaian dish made with rice and black-eyed beans, cooked with dried millet leaves for a rich flavor. Served with your choice of protein and accompaniments.</p>
-        <div class="food-price-rating">
-          <span class="price">$24.00</span>
-          <span class="rating"><i class="fa fa-star"></i> 4.9</span>
-        </div>
-      </div>
-    </div>  
-  </div>
-
-    
-    
-  
-
+  <!-- Desserts tab -->
+  <div id="desserts" class="food-container"></div>
 
   <div id="dishModal" class="modal">
     <div class="modal-content">
@@ -311,7 +111,7 @@
                     </div>
                     
                     <button id="addToCartBtn" class="add-to-cart-btn">
-                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fa fa-shopping-cart"></i>
                         Add to Cart
                     </button>
                 </div>
@@ -320,15 +120,7 @@
     </div>
 </div>
 
+<script type="module" src="main.js"></script>
 
- 
-<script type="module" src="restaurant.js"></script>
-  <script type="module" src="main.js">
-</script>
-
-
-  
-  
 </body>
-
 </html>
