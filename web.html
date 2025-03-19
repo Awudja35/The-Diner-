@@ -21,7 +21,11 @@
     <div class="header-links">
       <nav>
         <a href="">Menu</a>
-        <a href="">Cart</a>
+        
+          <a href="" id="cart-link" class="cart-icon">Cart
+            <i class="fa fa-shopping-cart"></i>(<span id="cart-badge">0</span>)</a>
+        
+        
         <a href="">Orders</a>
         <a href="">About</a>
         <a href="">Contact</a>
@@ -44,7 +48,7 @@
       <button data-tab='desserts'>Desserts</button>
     </div>
     <div class="search-container">
-      <input class="search__input" type="text" placeholder="SEARCH">
+      <input class="search__input" id="search-bar" type="text" placeholder="SEARCH" onkeyup="updateSearchDropdown()">
       <button><i class="fa fa-search" aria-hidden="true"></i></button>
     </div>
   </div>
@@ -52,11 +56,11 @@
   <div class="popular-container">
     <div class="divider"><span>Popular Dishes</span></div>
     <div class="dishes-container">
-      <div class="dish small"><img src="/imgs/dish1.webp" alt="Dish 1"></div>
-      <div class="dish medium"><img src="/imgs/dish2.webp" alt="Dish 2"></div>
-      <div class="dish large"><img src="/imgs/dish4.jpg" alt="Dish 3"></div>
-      <div class="dish medium"><img src="/imgs/dish4.jpg" alt="Dish 4"></div>
-      <div class="dish small"><img src="/imgs/dish2.webp" alt="Dish 5"></div>
+      <div class="dish small"><img src="/imgs/waakye.jpeg" alt="Dish 1"></div>
+      <div class="dish medium"><img src="/imgs/banku-tilapia.jpeg" alt="Dish 2"></div>
+      <div class="dish large"><img src="/imgs/hausa_koko.jpeg" alt="Dish 3"></div>
+      <div class="dish medium"><img src="/imgs/tea.jpeg" alt="Dish 4"></div>
+      <div class="dish small"><img src="/imgs/fruit_smoothie.jpeg" alt="Dish 5"></div>
     </div>
   </div>
 
@@ -101,7 +105,7 @@
                 <div class="cart-section">
                     <div class="total-price">
                         <span>Total:</span>
-                        <span id="totalPrice">$0.00</span>
+                        <span id="totalPrice">GHc0.00</span>
                     </div>
                     
                     <div class="quantity-control">
@@ -120,7 +124,10 @@
     </div>
 </div>
 
-<script type="module" src="main.js"></script>
 
+
+
+<script type="module" src="main.js"></script>
+<script src="restaurant.js"></script>
 </body>
 </html>
