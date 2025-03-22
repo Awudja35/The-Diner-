@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="15" cy="15" r="15" fill="#FF6B6B"/>
+                            <path d="M15 7C11.1 7 8 10.1 8 14C8 17.9 15 23 15 23C15 23 22 17.9 22 14C22 10.1 18.9 7 15 7ZM15 16C13.9 16 13 15.1 13 14C13 12.9 13.9 12 15 12C16.1 12 17 12.9 17 14C17 15.1 16.1 16 15 16Z" fill="white"/>
+                        </svg>
+                        <span>restaurant</span>
+                    </a>
+                </div>
+                <nav>
+                    <ul class="main-nav">
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="cta-button">
+                    <a href="#" class="btn primary-btn">Book a table</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-details">
+            <div class="container">
+                <div class="product-details-container">
+                    <div class="product-image">
+                        <!-- Product image will be set by JavaScript -->
+                    </div>
+                    <div class="product-info">
+                        <div class="product-header">
+                            <h1 id="product-name">Loading product...</h1>
+                            <button class="favorite-btn" id="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <span id="product-rating">4.9</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span id="product-price">$24.00</span>
+                        </div>
+                        
+                        <div class="product-description">
+                            <h3>Review</h3>
+                            <p id="product-description">Rooted in passion, we curate unforgettable dining experiences and offer exceptional services, blending culinary artistry with warm hospitality.</p>
+                        </div>
+                        
+                        <div class="product-ingredients">
+                            <h3>Ingredients</h3>
+                            <div class="ingredients-list" id="ingredients-list">
+                                <!-- Ingredients will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="quantity-selector">
+                            <button class="quantity-btn" id="decrease-quantity">-</button>
+                            <span id="quantity">1</span>
+                            <button class="quantity-btn" id="increase-quantity">+</button>
+                        </div>
+                        
+                        <button class="btn primary-btn add-to-cart-btn" id="add-to-cart-btn">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-products">
+            <div class="container">
+                <h2 class="section-title">You might also like</h2>
+                <div class="dishes-grid" id="related-products">
+                    <!-- Related products will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="15" cy="15" r="15" fill="#FF6B6B"/>
+                            <path d="M15 7C11.1 7 8 10.1 8 14C8 17.9 15 23 15 23C15 23 22 17.9 22 14C22 10.1 18.9 7 15 7ZM15 16C13.9 16 13 15.1 13 14C13 12.9 13.9 12 15 12C16.1 12 17 12.9 17 14C17 15.1 16.1 16 15 16Z" fill="white"/>
+                        </svg>
+                        <span>restaurant</span>
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="cart.html">Cart</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="tel:+12345678900">+1 (234) 567-8900</a></li>
+                            <li><a href="mailto:info@restaurant.com">info@restaurant.com</a></li>
+                            <li>123 Food Street, Tasty City</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Hours</h3>
+                        <ul>
+                            <li>Monday - Friday: 9am - 10pm</li>
+                            <li>Saturday - Sunday: 10am - 11pm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Restaurant. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <div class="toast-message">Item added to cart!</div>
+        </div>
+        <div class="toast-progress"></div>
+    </div>
+
+    <script src="data/menu.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

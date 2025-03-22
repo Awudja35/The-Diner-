@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Promo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="promo-section">
+      <div class="promo-content">
+        <h1>Get Our Promo Code by</h1>
+        <h2>Subscribing To Our Newsletter</h2>
+        <div class="subscription-form">
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+          <div id="promo-code" class="hidden"></div>
+          <button id="subscribe">Subscribe</button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-content">
+        <div class="about">
+          <h3>restaurant</h3>
+          <p>Aenean luctus nulla sit amet nibh ultricies</p>
+          <p class="footer-h4">Opening Hours</p>
+          <div class="opening-hours">
+            <div>
+              <span>Monday - Friday</span> <span><br />8:00am - 9:00pm</span>
+            </div>
+            <div>
+              <span>Sunday</span> <span><br />8:00am - 9:00pm</span>
+            </div>
+            <div>
+              <span>Saturday</span> <span><br />Closed</span>
+            </div>
+          </div>
+        </div>
+        <div class="NDF">
+          <div class="navigation">
+            <p class="footer-h4">Navigation</p>
+            <ul>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Main Dishes</a></li>
+            </ul>
+          </div>
+          <div class="dishes">
+            <p class="footer-h4">Dishes</p>
+            <ul>
+              <li>Fish & Veggie</li>
+              <li>Tofu Chili</li>
+              <li>Egg & Cucumber</li>
+              <li>Lumpia w/ Sauce</li>
+            </ul>
+          </div>
+          <div class="social">
+            <p class="footer-h4">Follow Us</p>
+            <a class="icons" href="#"
+              ><img src="/images/icons/facebook.png"
+            /></a>
+            <a class="icons" href="#"
+              ><img src="/images/icons/twittor.png"
+            /></a>
+            <a class="icons" href="#"
+              ><img src="/images/icons/twittor.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">
+        &copy; 2022 Restaurant. All rights reserved.<br />
+        Design by Untree.coo
+      </p>
+      <div class="line"></div>
+    </footer>
+    <script src="script.js">
+            document.getElementById('subscribe').addEventListener('click', function() {
+          const email = document.getElementById('email').value;
+          const promoDisplay = document.getElementById('promo-code');
+
+          if (validateEmail(email)) {
+              const promoCode = generatePromoCode();
+              promoDisplay.textContent = `Your promo code: ${promoCode}`;
+              promoDisplay.classList.remove('hidden');
+              document.getElementById('email').value = '';
+          } else {
+              alert('Please enter a valid email address');
+          }
+      });
+
+      function validateEmail(email) {
+          const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return re.test(email);
+      }
+
+      function generatePromoCode() {
+          return 'DINE' + Math.floor(1000 + Math.random() * 9000);
+      }
+    </script>
+  </body>
+</html>

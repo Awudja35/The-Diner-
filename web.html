@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="web.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>DHL Restaurant</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="/imgs/dhl.png" alt="logo" />
+      <span>DHL</span>
+    </div>
+    <div class="header-links">
+      <nav>
+        <a href="">Menu</a>
+        
+          <a href="" id="cart-link" class="cart-icon">Cart
+            <i class="fa fa-shopping-cart"></i>(<span id="cart-badge">0</span>)</a>
+        
+        
+        <a href="">Orders</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+      </nav>
+    </div>
+    <div>
+      <button>Book a table</button>
+    </div>
+  </header>
+
+  <div class="menu-title">
+    <h1>Browse Menu</h1>
+    <img src="./imgs/shape-5.png" width="246" height="412" loading="lazy" alt="shape"
+    class="shape shape-1 move-anim">
+    <div class="menu-options">
+      <button data-tab='all' class="active">All</button>
+      <button data-tab='breakfast'>Breakfast</button>
+      <button data-tab='main_dishes'>Main Dishes</button>
+      <button data-tab='drinks'>Drinks</button>
+      <button data-tab='desserts'>Desserts</button>
+    </div>
+    <div class="search-container">
+      <input class="search__input" id="search-bar" type="text" placeholder="SEARCH" onkeyup="updateSearchDropdown()">
+      <button><i class="fa fa-search" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  
+  <div class="popular-container">
+    <div class="divider"><span>Popular Dishes</span></div>
+    <div class="dishes-container">
+      <div class="dish small"><img src="/imgs/waakye.jpeg" alt="Dish 1"></div>
+      <div class="dish medium"><img src="/imgs/banku-tilapia.jpeg" alt="Dish 2"></div>
+      <div class="dish large"><img src="/imgs/hausa_koko.jpeg" alt="Dish 3"></div>
+      <div class="dish medium"><img src="/imgs/tea.jpeg" alt="Dish 4"></div>
+      <div class="dish small"><img src="/imgs/fruit_smoothie.jpeg" alt="Dish 5"></div>
+    </div>
+  </div>
+
+  <div class="divider"><span>Recommended Dishes</span></div>
+
+  <!--All Tab-->
+  <div id="all" class="food-container active"></div>
+
+  <!-- Breakfast tab -->
+  <div id="breakfast" class="food-container"></div>
+
+  <!-- Main Dishes tab -->
+  <div id="main_dishes" class="food-container"></div>
+
+  <!-- Drinks tab -->
+  <div id="drinks" class="food-container"></div>
+
+  <!-- Desserts tab -->
+  <div id="desserts" class="food-container"></div>
+
+  <div id="dishModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <div class="modal-details">
+                <h2 id="modalTitle"></h2>
+                <div id="modalDescription" class="modal-description"></div>
+                <div class="modal-price-rating">
+                    <span id="modalPrice" class="price"></span>
+                    <span id="modalRating" class="rating"></span>
+                </div>
+                
+                <div class="ingredients-section">
+                    <h3>Customize Your Dish:</h3>
+                    <p class="ingredient-info">Select additional ingredients </p>
+                    <div id="ingredientsList" class="ingredients-list"></div>
+                </div>
+                
+                <div class="cart-section">
+                    <div class="total-price">
+                        <span>Total:</span>
+                        <span id="totalPrice">GHc0.00</span>
+                    </div>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn-minus" id="decreaseQuantity">-</button>
+                        <input type="text" class="quantity-value" id="quantity" value="1" readonly>
+                        <button class="quantity-btn" id="increaseQuantity">+</button>
+                    </div>
+                    
+                    <button id="addToCartBtn" class="add-to-cart-btn">
+                        <i class="fa fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script type="module" src="main.js"></script>
+<script src="restaurant.js"></script>
+</body>
+</html>

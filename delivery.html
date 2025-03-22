@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery - Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="15" cy="15" r="15" fill="#FF8C42"/>
+                            <path d="M15 7C11.1 7 8 10.1 8 14C8 17.9 15 23 15 23C15 23 22 17.9 22 14C22 10.1 18.9 7 15 7ZM15 16C13.9 16 13 15.1 13 14C13 12.9 13.9 12 15 12C16.1 12 17 12.9 17 14C17 15.1 16.1 16 15 16Z" fill="white"/>
+                        </svg>
+                        <span>restaurant</span>
+                    </a>
+                </div>
+                <nav>
+                    <ul class="main-nav">
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="#">Orders</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="cta-button">
+                    <a href="#" class="btn primary-btn">Book a table</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="delivery-section">
+            <div class="container">
+                <div class="delivery-hero">
+                    <div class="delivery-hero-text">
+                        <h1>WOULD YOU LIKE TO <span class="highlight">ORDER</span> TODAY?</h1>
+                        <p>Delivery & Pick up now available</p>
+                    </div>
+                    <div class="delivery-hero-image">
+                        <!-- Burger image will be here -->
+                         <img src="https://static.wixstatic.com/media/f1892b_9eb3c2200e344a62bcd111496947207c~mv2.png/v1/fill/w_594,h_462,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/epic-burger-chicagos-best-burger_0004_ed.png" alt="Burger Image">
+                    </div>
+                </div>
+                
+                <div class="delivery-content">
+                    <div class="delivery-form-container">
+                        <h2>ADD AN ADDRESS TO GET YOUR <span class="highlight">ORDER</span></h2>
+                        
+                        <div class="delivery-btn-container">
+                            <button class="btn primary-btn delivery-btn">Delivery</button>
+                        </div>
+                        
+                        <div class="address-form">
+                            <p>Enter your address</p>
+                            <div class="address-input-container">
+                                <div class="location-icon-box">
+                                    <i class="fas fa-location-dot"></i>
+                                </div>
+                                <div class="address-input-box">
+                                    <input type="text" placeholder="Enter your location...">
+                                </div>
+                            </div>
+                            
+                            <div class="map-link">
+                                <i class="fas fa-map"></i>
+                                <span>Find address on the map</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/delivery.js"></script>
+</body>
+</html>

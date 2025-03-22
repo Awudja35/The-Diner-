@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="15" cy="15" r="15" fill="#FF6B6B"/>
+                            <path d="M15 7C11.1 7 8 10.1 8 14C8 17.9 15 23 15 23C15 23 22 17.9 22 14C22 10.1 18.9 7 15 7ZM15 16C13.9 16 13 15.1 13 14C13 12.9 13.9 12 15 12C16.1 12 17 12.9 17 14C17 15.1 16.1 16 15 16Z" fill="white"/>
+                        </svg>
+                        <span>restaurant</span>
+                    </a>
+                </div>
+                <nav>
+                    <ul class="main-nav">
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="cart.html" class="active">Cart</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="cta-button">
+                    <a href="#" class="btn primary-btn">Book a table</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cart-section">
+            <div class="container">
+                <div class="cart-container">
+                    <div class="cart-header">
+                        <h1>Cart</h1>
+                        <button id="close-cart" class="close-btn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    
+                    <div id="cart-items" class="cart-items">
+                        <!-- Cart items will be dynamically populated here -->
+                    </div>
+                    
+                    <div class="cart-empty" id="cart-empty">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p>Your cart is empty</p>
+                        <a href="menu.html" class="btn primary-btn">Browse Menu</a>
+                    </div>
+                    
+                    <div class="cart-summary" id="cart-summary">
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax:</span>
+                            <span id="tax">$0.00</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total:</span>
+                            <span id="total">$0.00</span>
+                        </div>
+                        
+                        <div class="cart-actions">
+                            <button id="update-cart" class="btn secondary-btn">Update Cart</button>
+                            <a href="delivery.html" id="checkout-btn" class="btn primary-btn">Proceed to Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <div class="toast-message" id="toast-message"></div>
+        </div>
+        <div class="toast-progress"></div>
+    </div>
+
+    <script src="data/menu.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
