@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay with Mobile Money</title>
+    <link rel="stylesheet" href="momo.css">
+</head>
+<body>
+
+    <div class="payment-container">
+        <!-- Left Sidebar -->
+        <div class="payment-methods">
+            <h3>PAY WITH</h3>
+            <div class="method active" id="mobile-money">
+                <span class="icon">💰</span>
+                <span class="text">Mobile Money</span>
+            </div>
+            <div class="method" id="card">
+                <span class="icon">💳</span>
+                <span class="text">Card</span>
+            </div>
+        </div>
+
+        <!-- Payment Form -->
+        <div class="payment-form">
+            <h2>Pay <span class="amount">GHS 64.50</span></h2>
+            <p>Enter your mobile money number and provider to start payment</p>
+            
+            <div class="input-group">
+                <input type="tel" id="phone" placeholder="050 000 0000">
+                <span class="flag">🇬🇭</span>
+            </div>
+
+            <select id="provider">
+                <option value="">Choose Provider</option>
+                <option value="mtn">MTN</option>
+                <option value="vodafone">Vodafone</option>
+                <option value="airteltigo">AirtelTigo</option>
+            </select>
+
+            <button id="confirm-btn">Confirm</button>
+
+            <p class="fee-info">An additional E-levy fee of 1% may apply to this payment. <a href="#">Learn more.</a></p>
+        </div>
+    </div>
+
+    <script src="momo.js"></script>
+</body>
+</html>
