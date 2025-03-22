@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="create.css">
+</head>
+<body>
+
+    <div class="payment-container">
+        <!-- Sidebar for Payment Methods -->
+        <div class="payment-methods">
+            <h3>PAY WITH</h3>
+            <div class="method" id="mobile-money">
+                <span class="icon">📱</span>
+                <span class="text">Mobile Money</span>
+            </div>
+            <div class="method active" id="card">
+                <span class="icon">💳</span>
+                <span class="text">Card</span>
+            </div>
+        </div>
+
+        <!-- Payment Form -->
+        <div class="payment-form">
+            <h2>Pay <span class="amount">GHS 64.50</span></h2>
+            <p>Enter your card details to pay</p>
+
+            <div class="input-group">
+                <label>CARD NUMBER</label>
+                <input type="text" id="card-number" placeholder="0000 0000 0000 0000" maxlength="19">
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label>CARD EXPIRY</label>
+                    <input type="text" id="expiry-date" placeholder="MM / YY" maxlength="5">
+                </div>
+                <div class="input-group">
+                    <label>CVV <span class="help">HELP?</span></label>
+                    <input type="text" id="cvv" placeholder="123" maxlength="3">
+                </div>
+            </div>
+
+            <div class="save-card">
+                <input type="checkbox" id="save-card">
+                <label for="save-card">Save this card for faster checkout</label>
+            </div>
+
+            <button id="confirm-btn">Confirm</button>
+            <p class="saved-card">Use a saved card</p>
+
+            <p class="fee-info">An additional E-levy fee of 1% may apply to this payment. <a href="#">Learn more.</a></p>
+        </div>
+    </div>
+
+    <script src="create.js"></script>
+</body>
+</html>
