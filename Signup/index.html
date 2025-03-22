@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant - Sign Up</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="welcome-section">
+        <div class="header-container">
+          <img src="logo.png" alt="restaurant logo" class="logo" />
+          <h1>restaurant</h1>
+        </div>
+        <h3>WELCOME!</h3>
+        <h3>THANK YOU FOR JOINING!</h3>
+        <img alt="welcome-bugger" src="bugger.png" />
+      </div>
+
+      <div class="form-side">
+        <h2>Create account</h2>
+        <form id="signupForm">
+          <div class="form-group">
+            <label>Name </label>
+            <input type="text" placeholder="Satoru Gojo" required />
+          </div>
+
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="+233 549273327" required />
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="satorugojo@gmail.com" required />
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="•••••••" required />
+          </div>
+
+          <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" placeholder="•••••••" required />
+          </div>
+
+          <div class="terms">
+            <input type="checkbox" id="terms" required />
+            <label for="terms">I agree terms & conditions</label>
+          </div>
+
+          <button type="submit">Sign Up</button>
+        </form>
+
+        <div class="links">
+          <p>
+            Already have an account? <a onclick="showSignIn()">Sign in</a>Here
+          </p>
+          <p class="skipForNow">
+            <a onclick="skipForNow()">Skip </a>and ask me later
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Password validation
+          const password = this.querySelector('input[type="password"]');
+          const confirmPassword = this.querySelectorAll(
+            'input[type="password"]'
+          )[1];
+
+          if (password.value !== confirmPassword.value) {
+            alert("Passwords do not match!");
+            return;
+          }
+
+          // Form submission logic
+          alert("Account created successfully!");
+          this.reset();
+        });
+
+      function showSignIn() {
+        alert("Redirecting to sign in page...");
+        // Add actual redirection logic here
+      }
+
+      function skipForNow() {
+        alert("Skipping registration...");
+        // Add actual skip logic here
+      }
+    </script>
+  </body>
+</html>

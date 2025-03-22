@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -131,3 +132,62 @@
 <script src="restaurant.js"></script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <link rel="stylesheet" href="webstyles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Restaurant ">
+        </div>
+
+        <h2>WE JUST TEXTED YOU</h2>
+
+        <div id="verification-message">
+            <p class="message-text">Please enter the verification code we just sent to</p>
+            <p id="email-container">
+                <span class="email" id="user-email"></span>
+                <span class="change-email">
+                    Different <span id="change-email" class="email-link">email?</span>
+                </span>
+            </p>
+        </div>
+
+        <!-- OTP Input -->
+        <div class="code-input">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+        </div>
+
+        <!-- Timer -->
+        <p class="timer">Your code will expire in <span id="countdown-timer">4:59</span> seconds</p>
+
+        <!-- Resend -->
+        <p class="resend"> 
+            <span class="resend-link" id="resend-code">Resend</span> code 
+        </p>
+
+        <!-- Submit Button -->
+        <button class="submit-btn" id="submit-btn">Submit</button>
+
+        <!-- Skip Option -->
+        <p class="skip">
+            <span class="skip-link">Skip</span> and ask me later
+        </p>
+    </div>
+
+    <script src="webscript.js"></script>
+</body>
+</html>
+>>>>>>> 3c321bfb6749c363af44ff39ccf243309e33f8c4

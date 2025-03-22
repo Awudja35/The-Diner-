@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Payment</title>
+    <link rel="stylesheet" href="conf.css">
+</head>
+<body>
+    <div class="popup" id="confirmationPopup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2 class="title">Confirm Details</h2>
+        <p class="subtitle">Please confirm your payment details</p>
+        <div class="details">
+            <p><strong>Name:</strong> <span id="name">Kofi Botwe</span></p>
+            <p><strong>Phone:</strong> <span id="phone">000 000 0000</span></p>
+            <p><strong>Amount:</strong> <span id="amount">GHS 10,000</span></p>
+        </div>
+        <div class="buttons">
+            <button class="check-orders" onclick="checkOrders()">Check Orders</button>
+            <button class="confirm-payment" onclick="confirmPayment()">Confirm Payment</button>
+        </div>
+    </div>
+    <script src="conf.js"></script>
+</body>
+</html>
