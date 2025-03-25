@@ -1,4 +1,5 @@
 import Product from "../model/product.model.js";
+import User from "../model/user.model.js";
 
 export const getCartProducts = async (req, res) => {
   try {
@@ -9,7 +10,11 @@ export const getCartProducts = async (req, res) => {
       const item = req.user.cartItems.find(
         (cartItem) => cartItem.id === product.id
       );
-      return { ...product.toJSON(), quantity: item.quantity };
+      return {
+        ...product.toJSON(),
+        quantity: item.quantity,
+        price: item.price,
+      };
     });
 
     res.json(cartItems);
@@ -24,11 +29,13 @@ export const addToCart = async (req, res) => {
     const { productId } = req.body;
     const user = req.user;
 
-    const existingItem = user.cartItems.find((item) => item.id === productId);
+    const existingItem = user.cartItems.find(
+      (item) => item && item.id === productId
+    );
     if (existingItem) {
       existingItem.quantity += 1;
     } else {
-      user.cartItems.push(productId);
+      user.cartItems.push({ id: productId });
     }
 
     await user.save();
@@ -80,3 +87,4 @@ export const updateQuantity = async (req, res) => {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
+
