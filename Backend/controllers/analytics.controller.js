@@ -11,11 +11,13 @@ export const getAnalyticsData = async () => {
 
   const orderData = await Order.aggregate([
     {
+      $match: { status: "Completed" },
+    },
+    {
       $group: {
         _id: null, // it groups all documents together,
         totalOrders: { $sum: 1 },
         totalRevenue: { $sum: "$totalAmount" },
-        completed: { $match: { status: "Completed" } },
       },
     },
   ]);
