@@ -1,4 +1,3 @@
-import redis from "../Lib/redis.js";
 //import cloudinary from "../lib/cloudinary.js";
 import Product from "../model/product.model.js";
 
@@ -14,23 +13,12 @@ export const getAllProducts = async (req, res) => {
 
 export const createProduct = async (req, res) => {
   try {
-    const { name, description, price, image, category } = req.body;
-
-    let cloudinaryResponse = null;
-
-    if (image) {
-      cloudinaryResponse = await cloudinary.uploader.upload(image, {
-        folder: "products",
-      });
-    }
+    const { Name, description, price, category } = req.body;
 
     const product = await Product.create({
-      name,
+      Name,
       description,
       price,
-      image: cloudinaryResponse?.secure_url
-        ? cloudinaryResponse.secure_url
-        : "",
       category,
     });
 
@@ -81,3 +69,15 @@ export const getRecommendedProducts = async (req, res) => {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
+
+export const getProductsByCategory = async (req, res) => {
+  const { category } = req.params;
+  try {
+    const products = await Product.find({ category });
+    res.json({ products });
+  } catch (error) {
+    console.log("Error in getProductsByCategory controller", error.message);
+    res.status(500).json({ message: "Server error", error: error.message });
+  }
+};
+
