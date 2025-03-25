@@ -1,5 +1,4 @@
 import Product from "../model/product.model.js";
-import User from "../model/user.model.js";
 
 export const getCartProducts = async (req, res) => {
   try {
@@ -29,13 +28,16 @@ export const addToCart = async (req, res) => {
     const { productId } = req.body;
     const user = req.user;
 
+    // Check for existing item using 'product' field
     const existingItem = user.cartItems.find(
-      (item) => item && item.id === productId
+      (item) => item.product === productId
     );
+
     if (existingItem) {
       existingItem.quantity += 1;
     } else {
-      user.cartItems.push({ id: productId });
+      // Add new item with 'product' field and initial quantity
+      user.cartItems.push({ product: productId, quantity: 1 });
     }
 
     await user.save();
@@ -87,4 +89,5 @@ export const updateQuantity = async (req, res) => {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
+
 
